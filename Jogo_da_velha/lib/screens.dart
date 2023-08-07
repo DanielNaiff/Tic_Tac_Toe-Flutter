@@ -3,13 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:calculadora_flutter/classes.dart';
 
 class Tela2 extends StatelessWidget {
-  const Tela2({super.key});
+  final String jogador1;
+  final String jogador2;
+  const Tela2({
+    super.key,
+    required this.jogador1,
+    required this.jogador2,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Coluna(),
+      child: Coluna(
+        jogador1: jogador1,
+        jogador2: jogador2,
+      ),
     ));
   }
 }

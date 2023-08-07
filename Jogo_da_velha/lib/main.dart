@@ -69,7 +69,9 @@ class _Tela1State extends State<Tela1> {
                       if (_formKey.currentState!.validate()) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return Tela2();
+                          return Tela2(
+                              jogador1: _jogador1.text,
+                              jogador2: _jogador2.text);
                         }));
                       }
                     },
